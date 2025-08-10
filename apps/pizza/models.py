@@ -2,6 +2,8 @@ from django.db import models
 
 from core.models import BaseModel
 
+from apps.pizza_shop.models import PizzaShopModel
+
 
 class PizzaModel(BaseModel):
     class Meta:
