@@ -1,5 +1,4 @@
 from rest_framework.generics import ListAPIView, RetrieveUpdateDestroyAPIView
-from rest_framework.request import Request
 
 from apps.pizza.filter import PizzaFilter
 from apps.pizza.models import PizzaModel
