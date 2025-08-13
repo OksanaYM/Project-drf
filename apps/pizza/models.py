@@ -27,6 +27,3 @@ class PizzaModel(BaseModel):
     price = models.FloatField()
     day = models.CharField(max_length=9, choices=DaysChoices.choices)
     pizza_shop = models.ForeignKey(PizzaShopModel,on_delete=models.CASCADE, related_name='pizzas' )
-
-
-
