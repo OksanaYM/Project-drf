@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
-from apps.models import PizzaShopModel
 from apps.pizza.serializer import PizzaSerializer
+from apps.pizza_shop.models import PizzaShopModel
 
 
 class PizzaShopSerializer(serializers.ModelSerializer):

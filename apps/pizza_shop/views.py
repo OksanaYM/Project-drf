@@ -3,8 +3,8 @@ from rest_framework import status
 from rest_framework.generics import GenericAPIView, ListCreateAPIView
 from rest_framework.response import Response
 
-from apps.models import PizzaShopModel
 from apps.pizza.serializer import PizzaSerializer
+from apps.pizza_shop.models import PizzaShopModel
 from apps.pizza_shop.serializer import PizzaShopSerializer
 
 

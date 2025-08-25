@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from rest_framework.generics import ListAPIView, RetrieveUpdateDestroyAPIView
 
+from apps.pizza.filter import PizzaFilter
 from apps.pizza.models import PizzaModel
 from apps.pizza.serializer import PizzaSerializer
 
