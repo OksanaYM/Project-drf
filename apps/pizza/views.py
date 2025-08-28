@@ -13,6 +13,7 @@ class PizzaListCreateView(ListAPIView):
     filterset_class = PizzaFilter
 
 
+
 class PizzaRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
     serializer_class = PizzaSerializer
     queryset = PizzaModel.objects.all()

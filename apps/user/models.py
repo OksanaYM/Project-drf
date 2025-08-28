@@ -20,10 +20,12 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
 class ProfileModel(BaseModel):
     class Meta:
         db_table = 'profile'
+        ordering = ['-id']
 
     name = models.CharField(max_length=20)
     surname = models.CharField(max_length=20)
     age = models.IntegerField()
     user = models.OneToOneField(UserModel, on_delete=models.CASCADE, related_name='profile')
+    objects = models.Manager()
 
 # Create your models here.
