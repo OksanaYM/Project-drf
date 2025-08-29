@@ -8,7 +8,7 @@ from core.models import BaseModel
 from apps.user.managers import UserManager
 
 
-class UserModel(AbstractBaseUser, PermissionsMixin):
+class UserModel(AbstractBaseUser, PermissionsMixin, BaseModel):
     class Meta:
         db_table = 'auth_user'
     email = models.EmailField(unique=True)
