@@ -3,9 +3,10 @@ from django.shortcuts import render
 
 from rest_framework.generics import ListAPIView
 
+from apps.user.serializer import UserSerializer
 
 UserModel = get_user_model()
 
 class UserListCreateView(ListAPIView):
     queryset = UserModel.objects.all()
-    serializer_class =
+    serializer_class = UserSerializer
