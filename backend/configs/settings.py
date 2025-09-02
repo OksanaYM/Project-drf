@@ -43,10 +43,10 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
 
     'core',
-    'apps.user',
-    'apps.auth',
-    'apps.pizza',
-    'apps.pizza_shop',
+    'backend.apps.user',
+    'backend.apps.auth',
+    'backend.apps.pizza',
+    'backend.apps.pizza_shop',
 
 ]
 
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-ROOT_URLCONF = 'configs.urls'
+ROOT_URLCONF = 'backend.configs.urls'
 
 TEMPLATES = [
     {

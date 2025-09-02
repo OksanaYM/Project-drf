@@ -1,11 +1,10 @@
 from django.core import validators as V
 from django.db import models
 
-from core.enums.regex_enum import RegexEnum
-from core.models import BaseModel
-
-from apps.pizza.managers import PizzaManager
-from apps.pizza_shop.models import PizzaShopModel
+from backend.apps.pizza.managers import PizzaManager
+from backend.apps.pizza_shop.models import PizzaShopModel
+from backend.core.enums.regex_enum import RegexEnum
+from backend.core.models import BaseModel
 
 
 class DaysChoices(models.TextChoices):

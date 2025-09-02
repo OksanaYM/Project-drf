@@ -3,9 +3,9 @@ from rest_framework import status
 from rest_framework.generics import GenericAPIView, ListCreateAPIView
 from rest_framework.response import Response
 
-from apps.pizza.serializer import PizzaSerializer
-from apps.pizza_shop.models import PizzaShopModel
-from apps.pizza_shop.serializer import PizzaShopSerializer
+from backend.apps.pizza.serializer import PizzaSerializer
+from backend.apps.pizza_shop.models import PizzaShopModel
+from backend.apps.pizza_shop.serializer import PizzaShopSerializer
 
 
 class PizzaShopListCreateView(ListCreateAPIView):

@@ -1,6 +1,6 @@
-from django_filters import rest_framework as filters
+from backend.apps.pizza.serializer import PizzaSerializer
 
-from apps.pizza.serializer import PizzaSerializer
+from django_filters import rest_framework as filters
 
 
 class PizzaFilter(filters.FilterSet):

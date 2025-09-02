@@ -1,10 +1,8 @@
-from django.shortcuts import render
-
 from rest_framework.generics import ListAPIView, RetrieveUpdateDestroyAPIView
 
-from apps.pizza.filter import PizzaFilter
-from apps.pizza.models import PizzaModel
-from apps.pizza.serializer import PizzaSerializer
+from backend.apps.pizza.filter import PizzaFilter
+from backend.apps.pizza.models import PizzaModel
+from backend.apps.pizza.serializer import PizzaSerializer
 
 
 class PizzaListCreateView(ListAPIView):

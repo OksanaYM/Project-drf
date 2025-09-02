@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class UserConfig(AppConfig):
+class PizzaShopConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.user'
+    name = 'backend.apps.pizza_shop'

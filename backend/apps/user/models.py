@@ -1,11 +1,8 @@
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 
-from rest_framework.fields import BooleanField
-
-from core.models import BaseModel
-
-from apps.user.managers import UserManager
+from backend.apps.user.managers import UserManager
+from backend.core.models import BaseModel
 
 
 class UserModel(AbstractBaseUser, PermissionsMixin, BaseModel):

@@ -1,6 +1,7 @@
 from django.apps import AppConfig
 
 
-class PizzaConfig(AppConfig):
+class AuthConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.pizza'
+    name = 'backend.apps.auth'
+    label = 'auth_'
