@@ -10,3 +10,5 @@ UserModel = get_user_model()
 class UserListCreateView(ListAPIView):
     queryset = UserModel.objects.all()
     serializer_class = UserSerializer
+
+
