@@ -1,6 +1,6 @@
-FROM python:3.12-alpine
+FROM python:3.13-alpine
 
-MAINTAINER: Some Dev
+MAINTAINER Some Dev
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \

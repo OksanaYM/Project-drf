@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {useEffect, useState} from "react";
+import axios from "axios";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [pizzas, setPizzas] = useState([])
+    useEffect(() => {
+        axios.get('/api/pizzas').then(({data}) =>
+        {setPizzas(data.data)})
+
+    }, []);
+
+    return(
+        <div>
+            {
+                pizzas.map(pizza => <div key={pizza.id}>
+                    {JSON.stringify(pizza)}
+                </div>)
+            }
+        </div>
+    )
 }
-
-export default App;
+export {App}
