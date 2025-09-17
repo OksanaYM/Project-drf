@@ -13,3 +13,7 @@ class PizzaSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('Price must be greater than 0')
         return price
 
+class PizzaPhotoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PizzaModel
+        fields = ('photo', )
