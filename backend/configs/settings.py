@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 
+from asgiref.typing import ASGIApplication
+
 from .extra_config import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -35,7 +37,7 @@ AUTH_USER_MODEL = 'user.UserModel'
 # Application definition
 
 INSTALLED_APPS = [
-
+    'daphne',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
@@ -76,6 +78,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'configs.wsgi.application'
+ASGI_APPLICATION = 'configs.asgi.application'
 
 
 # Database
