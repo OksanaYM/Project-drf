@@ -1,4 +1,5 @@
 from channels.db import database_sync_to_async
+from djangochannelsrestframework.decorators import action
 from djangochannelsrestframework.generics import GenericAsyncAPIConsumer
 
 
@@ -27,6 +28,18 @@ class ChatConsumer(GenericAsyncAPIConsumer):
         )
     async def sender(self, data):
         await self.send_json(data)
+
+    @action()
+    async def send_message(self, data, request_id, action):
+        await self.channel_layer.group_send(
+            self.room_name,
+            {
+                'type': 'sender',
+                'message': data,
+                'user': self.user_name,
+                'id': request_id
+            }
+        )
 
     @database_sync_to_async
     def get_profile_name(self):
