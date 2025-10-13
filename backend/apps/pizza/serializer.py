@@ -12,6 +12,8 @@ class PizzaSerializer(serializers.ModelSerializer):
         if price <= 0:
             raise serializers.ValidationError('Price must be greater than 0')
         return price
+    def create(self, validated_data):
+        return PizzaModel.objects.create(**validated_data, pizza_shop_id=1)
 
 class PizzaPhotoSerializer(serializers.ModelSerializer):
     class Meta:
