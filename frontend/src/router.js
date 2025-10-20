@@ -1,18 +1,21 @@
-import {createBrowserRouter} from "react-router-dom"
+import {createBrowserRouter, Navigate} from "react-router-dom"
 import {MainLayout} from "./layouts/MainLayout";
 import {LoginPage} from "./pages/LoginPage";
 import {PizzasPage} from "./pages/PizzasPage";
+
 const router = createBrowserRouter([
-    {path: '', element:<MainLayout/>, children:[
+    {
+        path: '', element: <MainLayout/>, children: [
             {
-                index:true, element:<Navigate to={'login'}/>
+                index: true, element: <Navigate to={'login'}/>
             },
             {
-                path: 'login', element:<LoginPage/>
+                path: 'login', element: <LoginPage/>
             },
             {
-                path: 'pizzas', element:<PizzasPage/>
+                path: 'pizzas', element: <PizzasPage/>
             }
-        ]}
+        ]
+    }
 ])
 export {router}
