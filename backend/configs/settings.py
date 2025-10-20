@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'apps.auth',
     'apps.pizza',
     'apps.pizza_shop',
+    'apps.chat',
 
 ]
 
