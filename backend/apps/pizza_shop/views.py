@@ -9,6 +9,10 @@ from apps.pizza_shop.serializer import PizzaShopSerializer
 
 
 class PizzaShopListCreateView(ListCreateAPIView):
+   # get:
+   #    get all pizza shop list
+   # post:
+   #     create new pizza shop
     serializer_class = PizzaShopSerializer
     queryset = PizzaShopModel.objects.all()
 

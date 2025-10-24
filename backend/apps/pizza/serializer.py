@@ -19,3 +19,6 @@ class PizzaPhotoSerializer(serializers.ModelSerializer):
     class Meta:
         model = PizzaModel
         fields = ('photo', )
+
+class PizzaResponseSerializer(serializers.ModelSerializer):
+    details = serializers.CharField(default='pizza-response')
